@@ -91,7 +91,7 @@ jobs:
 
       - name: DotNet Setup
         if: ${{ matrix.options.sdk-preview != true }}
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v3
         with:
           include-prerelease: true
           dotnet-version: |
@@ -99,7 +99,7 @@ jobs:
 
       - name: DotNet Setup Preview
         if: ${{ matrix.options.sdk-preview == true }}
-        uses: actions/setup-dotnet@v2
+        uses: actions/setup-dotnet@v3
         with:
           include-prerelease: true
           dotnet-version: |
